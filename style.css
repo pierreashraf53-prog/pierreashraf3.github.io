@@ -5,7 +5,6 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    /* الصفحة الأساسية ثابتة */
 }
 
 body {
@@ -50,7 +49,6 @@ header {
 
 .container {
     width: min(90%, 1200px);
-    /* وسعنا الحواف شوية للموبايل */
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -79,33 +77,42 @@ nav a:hover {
     color: #8ce67f;
 }
 
-/* ================= HERO & SECTIONS ================= */
+/* ================= HERO ================= */
 .hero-split {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 80vh;
+    min-height: 60vh; /* كان 80 */
     gap: 20px;
+    margin-top: -30px; /* يطلع لفوق */
 }
 
 .hero-text-side {
     flex: 1;
 }
 
+/* العنوان في سطر واحد */
+.hero-text-side h2 {
+    white-space: nowrap;
+}
+
 .hero-image-side {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    padding-right: 30px; /* يزق الصورة يمين */
 }
 
 .hero-image-side img {
     width: 100%;
     max-width: 600px;
     height: auto;
+    margin-right: -20px; /* يقربها من الحافة */
     filter: drop-shadow(0 20px 50px rgba(140, 230, 127, 0.3));
     transition: transform 0.4s ease;
 }
 
+/* ================= SECTIONS ================= */
 .section-wrapper {
     display: flex;
     justify-content: space-between;
@@ -115,7 +122,7 @@ nav a:hover {
     overflow: auto;
 }
 
-/* ================= TABLE (الحل هنا) ================= */
+/* ================= TABLE ================= */
 .table-content {
     width: 100%;
 }
@@ -124,28 +131,23 @@ main .container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .table-container {
     width: max-content;
     overflow-x: auto;
-    /* يسمح بالحركة يمين وشمال */
     display: block;
-    /* ضروري عشان الـ overflow يشتغل */
     background: #1e1e1e;
     padding: 15px;
     border-radius: 15px;
     margin: 20px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     -webkit-overflow-scrolling: touch;
-    /* نعومة الحركة على iOS */
 }
 
 table {
     width: 100%;
     min-width: 600px;
-    /* بيجبر الجدول يحافظ على عرضه فبيظهر الـ scroll */
     border-collapse: collapse;
     color: #ddd;
 }
@@ -156,7 +158,6 @@ td {
     border-bottom: 1px solid #2d2d2d;
     text-align: left;
     white-space: nowrap;
-    /* بيمنع الكلام ينزل تحت بعضه عشان الجدول يفضل مفرود */
 }
 
 th {
@@ -164,7 +165,6 @@ th {
     color: #8ce67f;
 }
 
-/* ===== Table Page Specific Fixes ===== */
 .table-page {
     overflow-x: hidden;
     padding-top: 120px;
@@ -173,7 +173,6 @@ th {
 .table-page .table-container {
     overflow-x: auto !important;
     touch-action: auto !important;
-    /* لغينا تقييد الـ pan-y */
 }
 
 /* ================= FORM ================= */
@@ -182,7 +181,6 @@ th {
     width: 100%;
     overflow: auto;
 }
-
 
 form {
     width: max-content;
@@ -249,12 +247,17 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-* @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     .hero-split,
     .section-wrapper {
         flex-direction: column;
         text-align: center;
+    }
+
+    /* يرجع العنوان طبيعي على الموبايل */
+    .hero-text-side h2 {
+        white-space: normal;
     }
 
     form {
@@ -271,4 +274,14 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
-} *
+
+    /* نشيل الزق عشان الموبايل */
+    .hero-image-side {
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .hero-image-side img {
+        margin-right: 0;
+    }
+}
