@@ -235,6 +235,21 @@ input[type="submit"] {
 .add-course-section input[type="submit"] {
     grid-column: span 2;
 }
+/* تخصيص صفحة Contact بس */
+.contact-section form {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* العنوان */
+.contact-section form h2 {
+    grid-column: span 2;
+}
+
+/* الرسالة + الزرار */
+.contact-section textarea,
+.contact-section input[type="submit"] {
+    grid-column: span 2;
+}
 /* ================= BUTTONS ================= */
 .btn-start,
 button,
