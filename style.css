@@ -292,7 +292,8 @@ footer {
     }
 
     form {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; !important:
+         width 100%;   
     }
 
     .full-width,
