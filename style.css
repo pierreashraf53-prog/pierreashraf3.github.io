@@ -249,7 +249,7 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-/* @media (max-width: 768px) {
+* @media (max-width: 768px) {
 
     .hero-split,
     .section-wrapper {
@@ -271,4 +271,4 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
-} */
+} *
