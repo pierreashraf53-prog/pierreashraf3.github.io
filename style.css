@@ -224,17 +224,45 @@ input[type="submit"] {
 .add-course-section form {
     grid-template-columns: repeat(2, 1fr);
 }
+/* فورم صفحة Add بس */
+.add-course-section form {
+    grid-template-columns: 1fr 1fr;
+}
 
-/* العنوان */
+/* العنوان لوحده */
 .add-course-section form h2 {
     grid-column: span 2;
 }
 
-/* notes + الزرار */
-.add-course-section .full-width,
+/* نخلي Notes ياخد نص مش كله */
+.add-course-section textarea {
+    height: 100%;
+}
+
+/* الزرار لوحده */
 .add-course-section input[type="submit"] {
     grid-column: span 2;
 }
+/* فورم صفحة Add بس */
+.add-course-section form {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* العنوان لوحده */
+.add-course-section form h2 {
+    grid-column: span 2;
+}
+
+/* نخلي Notes ياخد نص مش كله */
+.add-course-section textarea {
+    height: 100%;
+}
+
+/* الزرار لوحده */
+.add-course-section input[type="submit"] {
+    grid-column: span 2;
+}
+
 /* تخصيص صفحة Contact بس */
 .contact-section form {
     grid-template-columns: repeat(2, 1fr);
