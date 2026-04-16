@@ -321,7 +321,8 @@ footer {
 
     form {
         grid-template-columns: 1fr; !important:
-         width 100%;   
+         width 100%; 
+        padding: 20px;
     }
 
     .full-width,
