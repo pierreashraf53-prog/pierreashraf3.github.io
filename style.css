@@ -221,18 +221,6 @@ input[type="submit"] {
 .add-course-section form {
     grid-template-columns: repeat(4, 1fr);
 }
-
-/* العنوان ياخد صف كامل */
-.add-course-section form h2 {
-    grid-column: span 4;
-}
-
-/* الزرار و النوتس ياخدوا صف كامل */
-.add-course-section .full-width,
-.add-course-section button,
-.add-course-section input[type="submit"] {
-    grid-column: span 4;
-}
 /* ================= BUTTONS ================= */
 .btn-start,
 button,
